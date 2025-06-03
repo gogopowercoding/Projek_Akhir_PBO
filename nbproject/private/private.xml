@@ -4,14 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/model/User.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/tampilan/UserDashboard.java</file>
             <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/tampilan/LoginFrame.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/tampilan/AdminMainFrame.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/aplikasi/AplikasiSistemPerpajakanKendaraan.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/basisdata/KoneksiBasisData.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/aplikasi/AplikasiPembayaranPajak.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/tampilan/AdminDasboard.java</file>
+            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/tampilan/RegisterFrame.java</file>
             <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/model/UserDAO.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/model/PajakKendaraanDAO.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/tampilan/RegisterDialog.java</file>
-            <file>file:/D:/KULIAH/SEMESTER%204/Praktikum%20PBO/Projekdone/AplikasiSistemPerpajakanKendaraan/src/model/PajakKendaraan.java</file>
         </group>
     </open-files>
 </project-private>

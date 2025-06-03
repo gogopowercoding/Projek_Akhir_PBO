@@ -5,6 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import model.User;
 
 public class UserDAO {
     
@@ -119,8 +120,7 @@ public class UserDAO {
     }
     
     private static User mapResultSetToUser(ResultSet rs) throws SQLException {
-        return new User(
-            rs.getInt("id"),
+        User user = new User(
             rs.getString("username"),
             rs.getString("password"),
             rs.getString("nama_lengkap"),
@@ -129,6 +129,8 @@ public class UserDAO {
             rs.getString("email"),
             rs.getString("role")
         );
+        user.setId(rs.getInt("id"));
+        return user;
     }
     
     private static void handleSQLException(SQLException e, String customMessage) {
