@@ -1,16 +1,17 @@
 package aplikasi;
 
-/**
- *
- * @author Advan
- */
-public class AplikasiSistemPerpajakanKendaraan {
+import tampilan.LoginFrame;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Main {
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeel());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        SwingUtilities.invokeLater(() -> new LoginFrame().setVisible(true));
     }
-    
 }
