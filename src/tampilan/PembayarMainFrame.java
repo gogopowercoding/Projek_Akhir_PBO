@@ -16,11 +16,9 @@ public class PembayarMainFrame extends JFrame {
     private DefaultTableModel tableModel;
     private JButton btnTambahKendaraan;
     private JButton btnEditKendaraan;
-    private JButton btnUploadSTNK;
     private JButton btnBayarPajak;
     private JButton btnRefresh;
     private JButton btnLogout;
-    private JButton btnProfile;
     private JLabel lblTotalTagihan;
     private JComboBox<String> cmbFilter;
     
@@ -55,10 +53,8 @@ public class PembayarMainFrame extends JFrame {
         // Buttons
         btnTambahKendaraan = new JButton("Tambah Kendaraan");
         btnEditKendaraan = new JButton("Edit Data");
-        btnUploadSTNK = new JButton("Upload STNK");
         btnBayarPajak = new JButton("Bayar Pajak");
         btnRefresh = new JButton("Refresh");
-        btnProfile = new JButton("Profile");
         btnLogout = new JButton("Logout");
         
         // Filter
@@ -99,12 +95,10 @@ public class PembayarMainFrame extends JFrame {
         controlPanel.add(Box.createHorizontalStrut(20));
         controlPanel.add(btnTambahKendaraan);
         controlPanel.add(btnEditKendaraan);
-        controlPanel.add(btnUploadSTNK);
         controlPanel.add(btnBayarPajak);
         controlPanel.add(Box.createHorizontalStrut(20));
         controlPanel.add(btnRefresh);
         controlPanel.add(Box.createHorizontalGlue());
-        controlPanel.add(btnProfile);
         controlPanel.add(btnLogout);
         
         add(controlPanel, BorderLayout.NORTH);
@@ -124,10 +118,8 @@ public class PembayarMainFrame extends JFrame {
     private void setupEvents() {
         btnTambahKendaraan.addActionListener(e -> openTambahKendaraanDialog());
         btnEditKendaraan.addActionListener(e -> editSelectedKendaraan());
-        btnUploadSTNK.addActionListener(e -> uploadSTNK());
         btnBayarPajak.addActionListener(e -> bayarPajak());
         btnRefresh.addActionListener(e -> refreshData());
-        btnProfile.addActionListener(e -> openProfileDialog());
         btnLogout.addActionListener(e -> logout());
         
         cmbFilter.addActionListener(e -> applyFilter());
@@ -235,22 +227,6 @@ public class PembayarMainFrame extends JFrame {
         }
     }
     
-    private void uploadSTNK() {
-        int selectedRow = tablePajak.getSelectedRow();
-        if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, 
-                "Pilih kendaraan untuk upload STNK!", 
-                "Peringatan", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        
-        int pajakId = (Integer) tableModel.getValueAt(selectedRow, 0);
-        UploadSTNKDialog dialog = new UploadSTNKDialog(this, pajakId);
-        dialog.setVisible(true);
-        if (dialog.isFileUploaded()) {
-            refreshData();
-        }
-    }
     
     private void bayarPajak() {
         int selectedRow = tablePajak.getSelectedRow();
@@ -284,14 +260,6 @@ public class PembayarMainFrame extends JFrame {
         int pajakId = (Integer) tableModel.getValueAt(selectedRow, 0);
         DetailKendaraanDialog dialog = new DetailKendaraanDialog(this, pajakId);
         dialog.setVisible(true);
-    }
-    
-    private void openProfileDialog() {
-        ProfileDialog dialog = new ProfileDialog(this, currentUser);
-        dialog.setVisible(true);
-        if (dialog.isDataUpdated()) {
-            // Refresh user data if needed
-        }
     }
     
     private void logout() {

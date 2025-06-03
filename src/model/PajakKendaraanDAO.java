@@ -206,6 +206,11 @@ public class PajakKendaraanDAO {
         pajak.setPajak(rs.getDouble("pajak"));
         pajak.setDenda(rs.getDouble("denda"));
         
+        Date tanggalJatuhTempo = rs.getDate("tanggal_jatuh_tempo");
+        if (tanggalJatuhTempo != null) {
+            pajak.setTanggalJatuhTempo(tanggalJatuhTempo.toLocalDate());
+        }
+        
         Date tanggalBayar = rs.getDate("tanggal_bayar");
         if (tanggalBayar != null) {
             pajak.setTanggalBayar(tanggalBayar.toLocalDate());
@@ -229,9 +234,4 @@ public class PajakKendaraanDAO {
             "Database Error", 
             JOptionPane.ERROR_MESSAGE);
     }
-}ggalJatuhTempo = rs.getDate("tanggal_jatuh_tempo");
-        if (tanggalJatuhTempo != null) {
-            pajak.setTanggalJatuhTempo(tanggalJatuhTempo.toLocalDate());
-        }
-        
-        Date tan
+}

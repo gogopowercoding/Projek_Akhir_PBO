@@ -4,14 +4,15 @@ import tampilan.LoginFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-public class Main {
+public class AplikasiPembayaranPajak {
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeel());
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         SwingUtilities.invokeLater(() -> new LoginFrame().setVisible(true));
     }
 }
+
